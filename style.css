@@ -195,11 +195,16 @@ h1 {
   border-radius: 10px;
   overflow-x: auto;
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  font-size: .92rem;
-  line-height: 1.6;
+  font-size: .9rem;
+  line-height: 1.65;
   color: #dbe6ff;
   white-space: pre;
   tab-size: 4;
+}
+
+@media (max-width: 380px) {
+  .codigo { font-size: .84rem; padding: 12px 13px; }
+  .pergunta { font-size: 1.14rem; }
 }
 
 /* ── Opções ───────────────────────────────────── */
@@ -242,7 +247,7 @@ h1 {
   font-weight: 700;
   color: var(--texto-suave);
 }
-.opcao .texto { flex: 1; }
+.opcao .texto { flex: 1; overflow-wrap: anywhere; }
 .opcao .marca { font-size: 1.05rem; }
 
 /* usa monospace quando a opção é código */

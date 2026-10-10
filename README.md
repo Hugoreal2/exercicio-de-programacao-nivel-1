@@ -1,6 +1,6 @@
 # Exercício de Programação — Nível 1 🐍
 
-Quiz de escolha múltipla sobre as bases de Python. HTML, CSS e JavaScript puro — sem dependências, sem build.
+Quiz de escolha múltipla sobre as bases de Python, com ênfase em prever o output de código que mexe em variáveis. HTML, CSS e JavaScript puro — sem dependências, sem build.
 
 **Online:** https://hugoreal2.github.io/exercicio-de-programacao-nivel-1/
 

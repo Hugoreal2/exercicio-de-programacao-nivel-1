@@ -10,13 +10,6 @@ const SUBTITULO = "Nível 1 · Bases de Python em escolha múltipla.";
 
 const PERGUNTAS = [
   {
-    pergunta: "Qual é o resultado deste código?",
-    codigo: "print(type(5))",
-    opcoes: ["<class 'int'>", "<class 'float'>", "<class 'number'>", "int"],
-    correta: 0,
-    nota: "type() devolve a classe do objeto. O 5 é um inteiro, logo <class 'int'>."
-  },
-  {
     pergunta: "Como se cria uma lista vazia em Python?",
     opcoes: ["lista = []", "lista = {}", "lista = ()", "lista = new List()"],
     correta: 0,
@@ -72,13 +65,6 @@ const PERGUNTAS = [
     nota: "Em Python os índices começam em 0. O último pode ser acedido com -1."
   },
   {
-    pergunta: "O que imprime este código?",
-    codigo: 'nums = [1, 2, 3, 4]\nprint(nums[1:3])',
-    opcoes: ["[2, 3]", "[1, 2, 3]", "[2, 3, 4]", "[1, 2]"],
-    correta: 0,
-    nota: "No slicing [1:3] o início é incluído e o fim é excluído: posições 1 e 2."
-  },
-  {
     pergunta: "Qual destes tipos é imutável?",
     opcoes: ["tuple", "list", "dict", "set"],
     correta: 0,
@@ -115,12 +101,6 @@ const PERGUNTAS = [
     opcoes: ["Imprime Ana", "Imprime nome", "Dá KeyError", "Imprime o dicionário"],
     correta: 0,
     nota: "Num dicionário acede-se ao valor através da chave. Aqui a chave 'nome' vale 'Ana'."
-  },
-  {
-    pergunta: "Como converter a string \"42\" num número inteiro?",
-    opcoes: ['int("42")', 'str(42)', 'float("42")', 'number("42")'],
-    correta: 0,
-    nota: "int() converte para inteiro. float() daria 42.0 e str() faria o contrário."
   },
   {
     pergunta: "O que imprime este código?",

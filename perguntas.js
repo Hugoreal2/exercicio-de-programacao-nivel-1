@@ -121,6 +121,27 @@ const PERGUNTAS = [
     opcoes: ['int("42")', 'str(42)', 'float("42")', 'number("42")'],
     correta: 0,
     nota: "int() converte para inteiro. float() daria 42.0 e str() faria o contrário."
+  },
+  {
+    pergunta: "O que imprime este código?",
+    codigo: 'print("ab" * 3)',
+    opcoes: ["ababab", "ab ab ab", "abababab", "Erro: não se multiplica texto"],
+    correta: 0,
+    nota: "Com uma string, o * repete-a. \"ab\" repetido 3 vezes dá ababab, sem espaços entre as cópias."
+  },
+  {
+    pergunta: "O que imprime este código?",
+    codigo: 'for i in range(3):\n    print(i, end=" ")',
+    opcoes: ["0 1 2", "1 2 3", "0 1 2 3", "3"],
+    correta: 0,
+    nota: "range(3) gera 0, 1 e 2 — começa no 0 e não inclui o 3. O end=\" \" imprime tudo na mesma linha."
+  },
+  {
+    pergunta: "O que imprime este código?",
+    codigo: "print(10 / 2)",
+    opcoes: ["5.0", "5", "2.0", "Erro"],
+    correta: 0,
+    nota: "O operador / devolve sempre um float, mesmo quando a divisão é exata. Para obter 5 inteiro usa-se 10 // 2."
   }
 ];
 

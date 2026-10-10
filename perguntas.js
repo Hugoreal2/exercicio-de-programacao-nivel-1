@@ -5,8 +5,8 @@
 //  - "nota" é a explicação que aparece depois de responder
 // ─────────────────────────────────────────────────────────────
 
-const TITULO = "Quiz de Python";
-const SUBTITULO = "Perguntas básicas de escolha múltipla.";
+const TITULO = "Exercício de Programação";
+const SUBTITULO = "Nível 1 · Bases de Python em escolha múltipla.";
 
 const PERGUNTAS = [
   {

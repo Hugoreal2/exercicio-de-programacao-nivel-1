@@ -23,6 +23,13 @@ const PERGUNTAS = [
     nota: "[] cria uma lista, {} cria um dicionário e () cria um tuplo."
   },
   {
+    pergunta: "Que método usas para adicionar um elemento no final de uma lista?",
+    codigo: 'nums = [1, 2, 3]\nnums.____(4)   # -> [1, 2, 3, 4]',
+    opcoes: ["nums.append(4)", "nums.add(4)", "nums.insert(4)", "nums.push(4)"],
+    correta: 0,
+    nota: "append() acrescenta sempre no fim. add() é dos sets, push() não existe em Python e insert() precisa da posição: nums.insert(0, 4) poria no início."
+  },
+  {
     pergunta: "O que imprime este código?",
     codigo: "x = 10\ny = 3\nprint(x // y)",
     opcoes: ["3", "3.333...", "1", "Erro"],

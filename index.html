@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz do Amor 💕</title>
+  <meta name="description" content="Um quiz feito com carinho." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="coracoes" aria-hidden="true"></div>
+
+  <main class="cartao">
+
+    <!-- Ecrã inicial -->
+    <section id="ecra-inicio" class="ecra ativo">
+      <h1 id="titulo">Quiz</h1>
+      <p id="subtitulo" class="subtitulo"></p>
+      <p class="info"><span id="total-perguntas"></span> perguntas · leva menos de 2 minutos</p>
+      <button class="btn" id="btn-comecar">Começar 💘</button>
+    </section>
+
+    <!-- Ecrã do quiz -->
+    <section id="ecra-quiz" class="ecra">
+      <div class="barra"><div class="barra-fill" id="barra-fill"></div></div>
+      <p class="contador" id="contador"></p>
+      <h2 class="pergunta" id="pergunta"></h2>
+      <div class="opcoes" id="opcoes"></div>
+      <p class="feedback" id="feedback"></p>
+      <button class="btn btn-seguinte" id="btn-seguinte" hidden>Seguinte →</button>
+    </section>
+
+    <!-- Ecrã final -->
+    <section id="ecra-fim" class="ecra">
+      <div class="pontuacao" id="pontuacao"></div>
+      <h2 id="resultado-titulo"></h2>
+      <p class="subtitulo" id="resultado-texto"></p>
+      <ul class="revisao" id="revisao"></ul>
+      <button class="btn" id="btn-repetir">Jogar outra vez 🔁</button>
+    </section>
+
+  </main>
+
+  <footer class="rodape">Feito com ❤️</footer>
+
+  <script src="perguntas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

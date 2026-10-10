@@ -1,0 +1,192 @@
+:root {
+  --rosa: #ff6b8a;
+  --rosa-forte: #d94a69;
+  --fundo-1: #ffe9f0;
+  --fundo-2: #fff6e9;
+  --texto: #3b2b31;
+  --suave: #8a7278;
+  --certo: #2e9e6b;
+  --errado: #d9534f;
+  --borda: rgba(217, 74, 105, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(140deg, var(--fundo-1), var(--fundo-2));
+  overflow-x: hidden;
+}
+
+/* corações a flutuar no fundo */
+.coracoes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.coracoes span {
+  position: absolute;
+  bottom: -40px;
+  font-size: 22px;
+  opacity: 0.35;
+  animation: subir linear infinite;
+}
+@keyframes subir {
+  to { transform: translateY(-110vh) rotate(260deg); opacity: 0; }
+}
+
+.cartao {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 36px 30px;
+  box-shadow: 0 18px 50px rgba(217, 74, 105, 0.18);
+  border: 1px solid var(--borda);
+}
+
+.ecra { display: none; }
+.ecra.ativo { display: block; animation: aparecer .35s ease; }
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  text-align: center;
+}
+h2 { margin: 0 0 18px; font-size: 1.3rem; line-height: 1.35; }
+
+.subtitulo {
+  margin: 0 0 18px;
+  text-align: center;
+  color: var(--suave);
+  font-size: 1.02rem;
+}
+.info {
+  text-align: center;
+  color: var(--suave);
+  font-size: .88rem;
+  margin: 0 0 26px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--rosa);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+  font-family: inherit;
+}
+.btn:hover { background: var(--rosa-forte); transform: translateY(-2px); }
+.btn:active { transform: none; }
+.btn-seguinte { margin-top: 18px; }
+
+/* barra de progresso */
+.barra {
+  height: 7px;
+  background: #f6e3e8;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.barra-fill {
+  height: 100%;
+  width: 0;
+  background: var(--rosa);
+  border-radius: 99px;
+  transition: width .3s ease;
+}
+.contador {
+  margin: 0 0 8px;
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--suave);
+}
+
+.opcoes { display: grid; gap: 10px; }
+.opcao {
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  border: 2px solid #f0dde2;
+  border-radius: 14px;
+  background: #fffafb;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+  font-family: inherit;
+  color: inherit;
+}
+.opcao:hover:not(:disabled) { border-color: var(--rosa); background: #fff1f4; }
+.opcao:disabled { cursor: default; }
+.opcao.certa { border-color: var(--certo); background: #e8f8f0; font-weight: 600; }
+.opcao.errada { border-color: var(--errado); background: #fdeceb; }
+
+.feedback {
+  min-height: 1.4em;
+  margin: 16px 0 0;
+  font-size: .98rem;
+  color: var(--suave);
+}
+
+/* ecrã final */
+.pontuacao {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--rosa-forte);
+  margin-bottom: 6px;
+}
+#ecra-fim h2 { text-align: center; }
+
+.revisao {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+  display: grid;
+  gap: 8px;
+}
+.revisao li {
+  font-size: .92rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fffafb;
+  border: 1px solid #f0dde2;
+}
+.revisao li b { font-weight: 600; }
+
+.rodape {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  font-size: .82rem;
+  color: var(--suave);
+}
+
+@media (max-width: 480px) {
+  .cartao { padding: 28px 20px; border-radius: 18px; }
+  h1 { font-size: 1.6rem; }
+}

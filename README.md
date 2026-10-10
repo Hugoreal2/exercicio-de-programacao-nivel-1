@@ -1,43 +1,56 @@
-# Quiz do Amor 💕
+# Quiz de Python 🐍
 
-Um quiz simples em HTML + CSS + JavaScript puro, pronto para publicar no GitHub Pages.
+Quiz de escolha múltipla sobre as bases de Python. HTML, CSS e JavaScript puro — sem dependências, sem build.
 
-## Como editar as perguntas
+**Online:** https://hugoreal2.github.io/quiz-amor/
 
-Abre o ficheiro **`perguntas.js`**. É o único ficheiro que precisas de mexer:
+## Editar as perguntas
+
+Só precisas de mexer no ficheiro **`perguntas.js`**:
 
 ```js
 {
-  pergunta: "A tua pergunta aqui?",
-  opcoes: ["Opção A", "Opção B", "Opção C", "Opção D"],
-  correta: 0,            // 0 = primeira opção, 1 = segunda, ...
-  nota: "Mensagem que aparece depois de responder."
+  pergunta: "O que imprime este código?",
+  codigo: "print(2 ** 3)",        // opcional: bloco de código
+  opcoes: ["8", "6", "9", "Erro"],
+  correta: 0,                     // 0 = primeira opção
+  nota: "** é a potência: 2 elevado a 3 = 8."
 }
 ```
+
+As opções são **embaralhadas em cada jogo**, por isso a posição da resposta certa
+no ficheiro não importa — podes deixar sempre a correta no índice `0`.
 
 Também podes mudar o `TITULO`, o `SUBTITULO` e as mensagens finais (`RESULTADOS`).
 
 ## Ver localmente
 
-Basta abrir o `index.html` no browser (duplo clique). Ou:
-
 ```bash
 python3 -m http.server 8000
-# depois abre http://localhost:8000
+# abre http://localhost:8000
 ```
 
-## Publicar no GitHub Pages
+## Design
 
-1. No repositório no GitHub: **Settings → Pages**
-2. Em *Source*, escolhe **Deploy from a branch**
-3. Branch: `main`, pasta `/ (root)` → **Save**
-4. Ao fim de um minuto o quiz fica em `https://<utilizador>.github.io/quiz-amor/`
+Pensado primeiro para telemóvel:
+
+- Layout de altura total (`100dvh`) com o botão principal fixo em baixo
+- Áreas de toque de 54–56 px e respeito pela *safe area* do iPhone
+- Tema escuro com acento azul/amarelo, sem dependências de fontes externas
+- Barra de progresso, contador de acertos e explicação após cada resposta
+- Em ecrãs largos passa a cartão centrado
+- Respeita `prefers-reduced-motion`
 
 ## Ficheiros
 
 | Ficheiro | O que faz |
 |---|---|
-| `index.html` | Estrutura da página |
-| `style.css` | Aspeto visual |
+| `index.html` | Estrutura dos três ecrãs (início, quiz, resultado) |
+| `style.css` | Design e responsividade |
 | `perguntas.js` | **As perguntas e os textos** |
-| `script.js` | Lógica do quiz |
+| `script.js` | Lógica: embaralhar, pontuar, revisão final |
+
+## Publicar no GitHub Pages
+
+Já está ativo (branch `main`, pasta raiz). Depois de cada `git push` o site
+atualiza-se ao fim de cerca de um minuto.
